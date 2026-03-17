@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Customer Intelligence System</title>
+
+<title>AI Article Intelligence System</title>
 
 <style>
 body {
@@ -11,7 +12,7 @@ body {
     background: #f8fafc;
     color: #0f172a;
     margin: 0;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .container {
@@ -19,26 +20,69 @@ body {
     margin: auto;
 }
 
+/* Header */
 h1 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-.section {
-    margin-top: 40px;
+.subtitle {
+    color: #64748b;
+    margin-bottom: 40px;
 }
 
+/* Cards */
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 16px;
     border: 1px solid #e2e8f0;
-    margin-top: 20px;
+    transition: all 0.25s ease;
 }
 
+.card:hover {
+    transform: translateY(-4px);
+    border: 1px solid #a78bfa;
+    box-shadow: 0 10px 30px rgba(167,139,250,0.15);
+}
+
+/* Text */
+p, ul {
+    color: #475569;
+}
+
+/* Section title */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    background: rgba(147,51,234,0.1);
+    color: #9333ea;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Image */
 img {
     width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Back button */
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #9333ea;
+    font-weight: 600;
 }
 </style>
 </head>
@@ -47,40 +91,86 @@ img {
 
 <div class="container">
 
-<h1>📊 AI Customer Intelligence System</h1>
-<p>Automated system for analyzing Google Maps reviews using AI.</p>
+<a href="https://josua1983.github.io/" class="back">← Back to portfolio</a>
 
-<div class="section">
+<h1>🧠 AI Article Intelligence System</h1>
+<p class="subtitle">
+Automatically turn RSS articles into AI-powered summaries, categories and reports.
+</p>
+
+<!-- OVERVIEW -->
+<div class="card">
+    <div class="badge">OVERVIEW</div>
+    <h2>📊 What this system does</h2>
+
+    <p>
+    This automation monitors RSS feeds (like TechCrunch), extracts full article content,
+    and uses AI to generate structured summaries with categories and scoring.
+    </p>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="card">
+    <div class="badge">PROCESS</div>
     <h2>⚙️ How it works</h2>
-    <div class="card">
-        <p>
-        1. Scrapes Google Maps reviews<br>
-        2. Sends data to AI (Gemini)<br>
-        3. Generates structured business report<br>
-        4. Saves report in Google Docs automatically
-        </p>
-    </div>
+
+    <ul>
+        <li>Detects new articles from RSS feeds</li>
+        <li>Fetches full article content via HTTP</li>
+        <li>Converts HTML into clean readable text</li>
+        <li>Uses AI (Gemini) to summarize and categorize</li>
+        <li>Saves results into Google Sheets</li>
+        <li>Creates structured reports in Google Docs</li>
+    </ul>
 </div>
 
-<div class="section">
-    <h2>📸 Automation Screenshots</h2>
-    <div class="card">
-        <p>Upload your Make.com screenshots here 👇</p>
-        <img src="screenshot1.png">
-        <img src="screenshot2.png">
-    </div>
+<!-- SCREENSHOT -->
+<div class="card">
+    <div class="badge">AUTOMATION</div>
+    <h2>🔄 Make.com Scenario</h2>
+
+    <p>
+    Full automation flow built in Make.com. This runs automatically and processes new content without manual work.
+    </p>
+
+    <!-- 👇 VERVANG BESTANDSNAAM -->
+    <img src="rss-flow.png" alt="Make automation flow">
 </div>
 
-<div class="section">
-    <h2>💡 Business Value</h2>
-    <div class="card">
-        <p>
-        - Saves hours of manual work<br>
-        - Identifies customer complaints instantly<br>
-        - Helps improve product & service quality<br>
-        - Gives clear actionable insights
-        </p>
-    </div>
+<!-- VALUE -->
+<div class="card">
+    <div class="badge">VALUE</div>
+    <h2>💡 Business value</h2>
+
+    <ul>
+        <li>Saves hours of manual research</li>
+        <li>Instantly identifies important trends</li>
+        <li>Creates ready-to-use summaries</li>
+        <li>Helps businesses stay ahead of competitors</li>
+    </ul>
+</div>
+
+<!-- CTA -->
+<div class="card">
+    <div class="badge">CONTACT</div>
+    <h2>📩 Work With Me</h2>
+
+    <p>
+    Want a system like this for your business?
+    </p>
+
+    <a href="mailto:your@email.com" style="
+        display:inline-block;
+        margin-top:10px;
+        padding:12px 20px;
+        border-radius:8px;
+        background: linear-gradient(135deg, #9333ea, #c084fc);
+        color:white;
+        text-decoration:none;
+        font-weight:bold;
+    ">
+        Contact Me
+    </a>
 </div>
 
 </div>
