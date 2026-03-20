@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Article Intelligence System</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
+    background: #f8fafc;
+    color: #0f172a;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 1px solid #a78bfa;
+    box-shadow: 0 10px 30px rgba(167,139,250,0.15);
+}
+
+p, ul {
+    color: #475569;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(147,51,234,0.1);
+    color: #9333ea;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #9333ea;
+    font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="https://josua1983.github.io/" class="back">← Back to portfolio</a>
+
+<h1>🧠 AI Article Intelligence System</h1>
+
+<p class="subtitle">
+Automated system that transforms raw online content into structured, actionable business intelligence in real-time.
+</p>
+
+<!-- OVERVIEW -->
+<div class="card">
+    <div class="badge">OVERVIEW</div>
+    <h2>📊 What this system does</h2>
+
+    <p>
+    This system continuously monitors RSS feeds (e.g. TechCrunch), retrieves full article content, 
+    and uses AI to convert unstructured information into clear, structured insights.
+    </p>
+
+    <p>
+    Instead of manually reading articles, businesses receive summarized intelligence, categorized data, 
+    trend detection, and actionable signals — automatically.
+    </p>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="card">
+    <div class="badge">PROCESS</div>
+    <h2>⚙️ How it works</h2>
+
+    <ul>
+        <li>Monitors RSS feeds for new articles (real-time ingestion)</li>
+        <li>Fetches full article content via HTTP</li>
+        <li>Cleans and converts HTML into readable text</li>
+        <li>Uses AI to generate structured outputs:
+            <ul>
+                <li>Summary (3 sentences)</li>
+                <li>Category (AI, startup, marketing, etc.)</li>
+                <li>Trend detection (yes/no)</li>
+                <li>Importance score (1–10)</li>
+                <li>Business impact (low / medium / high)</li>
+                <li>Keywords extraction</li>
+            </ul>
+        </li>
+        <li>Stores results in a structured database (Google Sheets)</li>
+        <li>Generates ready-to-use reports (Google Docs)</li>
+    </ul>
+</div>
+
+<!-- SCREENSHOT -->
+<div class="card">
+    <div class="badge">AUTOMATION</div>
+    <h2>🔄 Make.com Scenario</h2>
+
+    <p>
+    Fully automated workflow built in Make.com. No manual input required — the system runs continuously.
+    </p>
+
+    <img src="rss-flow.png" alt="AI automation flow">
+</div>
+
+<!-- VALUE -->
+<div class="card">
+    <div class="badge">BUSINESS VALUE</div>
+    <h2>💡 Why this matters</h2>
+
+    <ul>
+        <li>Reduces manual research time by 80–90%</li>
+        <li>Transforms content overload into clear insights</li>
+        <li>Identifies trends before competitors</li>
+        <li>Enables faster, data-driven decisions</li>
+        <li>Creates a reusable intelligence database</li>
+    </ul>
+</div>
+
+<!-- USE CASES -->
+<div class="card">
+    <div class="badge">USE CASES</div>
+    <h2>📈 Where businesses use this</h2>
+
+    <ul>
+        <li>Market research automation</li>
+        <li>Startup & tech trend monitoring</li>
+        <li>Competitive intelligence</li>
+        <li>Content & media analysis</li>
+        <li>Investment research</li>
+    </ul>
+</div>
+
+<!-- TECH -->
+<div class="card">
+    <div class="badge">TECH</div>
+    <h2>🧠 Tech Stack</h2>
+
+    <ul>
+        <li>Make.com (automation engine)</li>
+        <li>RSS feeds (data ingestion)</li>
+        <li>HTTP module (content retrieval)</li>
+        <li>HTML parser (data cleaning)</li>
+        <li>Google Gemini AI (analysis)</li>
+        <li>Google Sheets (data storage)</li>
+        <li>Google Docs (report generation)</li>
+    </ul>
+</div>
+
+</div>
+
+</body>
+</html>
