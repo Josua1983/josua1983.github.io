@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Lead Qualification System</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
+    background: #f8fafc;
+    color: #0f172a;
+    margin: 0;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.highlight {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Lead Qualification & Routing System</h1>
+
+<p>
+This system automatically processes incoming leads, analyzes intent using AI, and routes them instantly to the right channel.
+It replaces manual lead sorting and ensures businesses never miss high-value opportunities.
+</p>
+
+---
+
+<div class="section">
+<h2>🔧 System Overview</h2>
+
+<img src="Integration Webhooks.png" alt="Make Scenario">
+
+<p>
+The system is built using Make.com and consists of a real-time automation pipeline:
+</p>
+
+<ul>
+<li>Webhook receives incoming lead data</li>
+<li>AI (Google Gemini) analyzes the message</li>
+<li>JSON parser structures the output</li>
+<li>Router directs leads based on classification</li>
+<li>Telegram sends instant notifications</li>
+</ul>
+
+</div>
+
+---
+
+<div class="section">
+<h2>🧠 Step 1 — Lead Input</h2>
+
+<p>
+A webhook captures incoming lead data such as:
+</p>
+
+<ul>
+<li>Name</li>
+<li>Email</li>
+<li>Message</li>
+</ul>
+
+<p>
+This can come from a website form, landing page, or API.
+</p>
+</div>
+
+---
+
+<div class="section">
+<h2>🧠 Step 2 — AI Analysis</h2>
+
+<p>
+The system uses AI to analyze the lead message and determine:
+</p>
+
+<ul>
+<li>Type: HOT / WARM / COLD</li>
+<li>Summary</li>
+<li>Urgency</li>
+<li>Intent</li>
+</ul>
+
+<div class="highlight">
+Example:
+<br><br>
+HOT → ready to buy<br>
+WARM → interested but not urgent<br>
+COLD → early research phase
+</div>
+
+</div>
+
+---
+
+<div class="section">
+<h2>🧩 Step 3 — JSON Structuring</h2>
+
+<p>
+The AI output is converted into structured data using a JSON parser.
+This ensures reliable routing and eliminates parsing errors.
+</p>
+
+</div>
+
+---
+
+<div class="section">
+<h2>🚦 Step 4 — Smart Routing</h2>
+
+<p>
+The router sends leads to different flows:
+</p>
+
+<ul>
+<li>🔥 HOT → Immediate notification</li>
+<li>🌤️ WARM → Follow-up flow</li>
+<li>❄️ COLD → Stored for later nurturing</li>
+</ul>
+
+<p>
+A fallback route ensures no lead is ever lost.
+</p>
+
+</div>
+
+---
+
+<div class="section">
+<h2>📲 Step 5 — Real-Time Alerts</h2>
+
+<img src="Telegram_AI.png" alt="Telegram Output">
+
+<p>
+Leads are instantly delivered to Telegram with structured insights:
+</p>
+
+<ul>
+<li>Summary of the situation</li>
+<li>Intent of the lead</li>
+<li>Urgency level</li>
+</ul>
+
+<p>
+This enables immediate action without opening dashboards.
+</p>
+
+</div>
+
+---
+
+<div class="section">
+<h2>💰 Business Value</h2>
+
+<ul>
+<li>⚡ Respond to HOT leads instantly → more conversions</li>
+<li>📉 Eliminate missed opportunities</li>
+<li>🧠 No manual lead sorting needed</li>
+<li>📊 Scalable system for high lead volume</li>
+<li>💸 Direct impact on revenue</li>
+</ul>
+
+<div class="highlight">
+Most businesses lose leads because they respond too late.
+This system fixes that completely.
+</div>
+
+</div>
+
+---
+
+<div class="section">
+<h2>🚀 Conclusion</h2>
+
+<p>
+This system transforms raw incoming leads into actionable insights and immediate actions.
+It turns AI into a real business tool that drives revenue instead of just generating data.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
