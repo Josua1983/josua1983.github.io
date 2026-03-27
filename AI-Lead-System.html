@@ -12,7 +12,7 @@ body {
     background: #f8fafc;
     color: #0f172a;
     margin: 0;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 .container {
@@ -22,10 +22,41 @@ body {
 
 h1 {
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
-.section {
-    margin-top: 40px;
+.subtitle {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 1px solid #a78bfa;
+    box-shadow: 0 10px 30px rgba(167,139,250,0.15);
+}
+
+p, ul {
+    color: #475569;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(147,51,234,0.1);
+    color: #9333ea;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 img {
@@ -35,13 +66,13 @@ img {
     border: 1px solid #e2e8f0;
 }
 
-.highlight {
-    background: #eef2ff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #9333ea;
+    font-weight: 600;
 }
-
 </style>
 </head>
 
@@ -49,165 +80,143 @@ img {
 
 <div class="container">
 
+<a href="https://josua1983.github.io/" class="back">← Back to portfolio</a>
+
 <h1>🤖 AI Lead Qualification & Routing System</h1>
 
-<p>
-This system automatically processes incoming leads, analyzes intent using AI, and routes them instantly to the right channel.
-It replaces manual lead sorting and ensures businesses never miss high-value opportunities.
+<p class="subtitle">
+AI-powered system that analyzes, classifies, and routes leads in real-time — turning incoming messages into immediate business actions.
 </p>
 
----
+<!-- OVERVIEW -->
+<div class="card">
+<div class="badge">OVERVIEW</div>
 
-<div class="section">
-<h2>🔧 System Overview</h2>
+<h2>🎯 What this system does</h2>
+
+<p>
+This system captures incoming leads and uses AI to instantly determine their value.
+Instead of manually reading and sorting messages, businesses receive structured insights and automatic routing.
+</p>
+
+<p>
+High-value leads are acted on immediately, while lower-value leads are organized for follow-up — fully automated.
+</p>
+
+</div>
+
+<!-- PROCESS -->
+<div class="card">
+<div class="badge">PROCESS</div>
+
+<h2>⚙️ How it works</h2>
+
+<ul>
+<li>Webhook receives lead data (name, email, message)</li>
+<li>AI analyzes intent and classifies the lead</li>
+<li>JSON parser structures the AI output</li>
+<li>Router directs leads (HOT / WARM / COLD)</li>
+<li>Telegram sends real-time notifications</li>
+</ul>
+
+</div>
+
+<!-- AUTOMATION -->
+<div class="card">
+<div class="badge">AUTOMATION</div>
+
+<h2>🔄 Make.com Scenario</h2>
+
+<p>
+Fully automated pipeline that processes leads in real-time without manual intervention.
+</p>
 
 <img src="Integration Webhooks.png" alt="Make Scenario">
 
+</div>
+
+<!-- AI OUTPUT -->
+<div class="card">
+<div class="badge">AI OUTPUT</div>
+
+<h2>🧠 Lead Intelligence</h2>
+
 <p>
-The system is built using Make.com and consists of a real-time automation pipeline:
+Each lead is enriched with structured insights:
 </p>
 
 <ul>
-<li>Webhook receives incoming lead data</li>
-<li>AI (Google Gemini) analyzes the message</li>
-<li>JSON parser structures the output</li>
-<li>Router directs leads based on classification</li>
-<li>Telegram sends instant notifications</li>
-</ul>
-
-</div>
-
----
-
-<div class="section">
-<h2>🧠 Step 1 — Lead Input</h2>
-
-<p>
-A webhook captures incoming lead data such as:
-</p>
-
-<ul>
-<li>Name</li>
-<li>Email</li>
-<li>Message</li>
+<li>Type → HOT / WARM / COLD</li>
+<li>Summary → What the lead wants</li>
+<li>Urgency → How fast to act</li>
+<li>Intent → Buying vs browsing</li>
 </ul>
 
 <p>
-This can come from a website form, landing page, or API.
+This turns raw messages into clear business signals.
 </p>
+
 </div>
 
----
+<!-- ALERTS -->
+<div class="card">
+<div class="badge">ALERTS</div>
 
-<div class="section">
-<h2>🧠 Step 2 — AI Analysis</h2>
+<h2>📲 Real-Time Notifications</h2>
 
 <p>
-The system uses AI to analyze the lead message and determine:
+Leads are instantly delivered to Telegram with actionable insights.
 </p>
-
-<ul>
-<li>Type: HOT / WARM / COLD</li>
-<li>Summary</li>
-<li>Urgency</li>
-<li>Intent</li>
-</ul>
-
-<div class="highlight">
-Example:
-<br><br>
-HOT → ready to buy<br>
-WARM → interested but not urgent<br>
-COLD → early research phase
-</div>
-
-</div>
-
----
-
-<div class="section">
-<h2>🧩 Step 3 — JSON Structuring</h2>
-
-<p>
-The AI output is converted into structured data using a JSON parser.
-This ensures reliable routing and eliminates parsing errors.
-</p>
-
-</div>
-
----
-
-<div class="section">
-<h2>🚦 Step 4 — Smart Routing</h2>
-
-<p>
-The router sends leads to different flows:
-</p>
-
-<ul>
-<li>🔥 HOT → Immediate notification</li>
-<li>🌤️ WARM → Follow-up flow</li>
-<li>❄️ COLD → Stored for later nurturing</li>
-</ul>
-
-<p>
-A fallback route ensures no lead is ever lost.
-</p>
-
-</div>
-
----
-
-<div class="section">
-<h2>📲 Step 5 — Real-Time Alerts</h2>
 
 <img src="Telegram_AI.png" alt="Telegram Output">
 
-<p>
-Leads are instantly delivered to Telegram with structured insights:
-</p>
+</div>
+
+<!-- VALUE -->
+<div class="card">
+<div class="badge">BUSINESS VALUE</div>
+
+<h2>💰 Why this matters</h2>
 
 <ul>
-<li>Summary of the situation</li>
-<li>Intent of the lead</li>
-<li>Urgency level</li>
+<li>⚡ Respond instantly to HOT leads → more conversions</li>
+<li>📉 Prevent lost revenue from slow replies</li>
+<li>🧠 No manual lead sorting</li>
+<li>📊 Scales with unlimited leads</li>
+<li>💸 Direct impact on sales performance</li>
 </ul>
-
-<p>
-This enables immediate action without opening dashboards.
-</p>
 
 </div>
 
----
+<!-- USE CASES -->
+<div class="card">
+<div class="badge">USE CASES</div>
 
-<div class="section">
-<h2>💰 Business Value</h2>
+<h2>📈 Where businesses use this</h2>
 
 <ul>
-<li>⚡ Respond to HOT leads instantly → more conversions</li>
-<li>📉 Eliminate missed opportunities</li>
-<li>🧠 No manual lead sorting needed</li>
-<li>📊 Scalable system for high lead volume</li>
-<li>💸 Direct impact on revenue</li>
+<li>Lead generation funnels</li>
+<li>Marketing agencies</li>
+<li>Sales teams</li>
+<li>Service-based businesses</li>
+<li>Startups handling inbound leads</li>
 </ul>
 
-<div class="highlight">
-Most businesses lose leads because they respond too late.
-This system fixes that completely.
 </div>
 
-</div>
+<!-- TECH -->
+<div class="card">
+<div class="badge">TECH</div>
 
----
+<h2>🧠 Tech Stack</h2>
 
-<div class="section">
-<h2>🚀 Conclusion</h2>
-
-<p>
-This system transforms raw incoming leads into actionable insights and immediate actions.
-It turns AI into a real business tool that drives revenue instead of just generating data.
-</p>
+<ul>
+<li>Make.com (automation)</li>
+<li>Webhooks (lead intake)</li>
+<li>Google Gemini AI (analysis)</li>
+<li>JSON Parser (data structuring)</li>
+<li>Telegram API (notifications)</li>
+</ul>
 
 </div>
 
