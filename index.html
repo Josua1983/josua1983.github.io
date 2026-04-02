@@ -108,6 +108,11 @@ h1 .acc{color:var(--accent)}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  .service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 .service-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all .3s}
 .service-card:hover{border-color:var(--border-strong);transform:translateY(-4px);box-shadow:0 12px 32px rgba(124,58,237,0.1)}
 .service-card.popular{border-color:var(--accent);background:linear-gradient(135deg,#fff,rgba(124,58,237,0.04));position:relative}
@@ -119,6 +124,7 @@ h1 .acc{color:var(--accent)}
 .service-card ul{list-style:none;padding:0}
 .service-card ul li{color:var(--muted);font-size:12px;padding:4px 0;display:flex;align-items:center;gap:8px}
 .service-card ul li::before{content:'✓';color:var(--accent);font-weight:700;font-size:11px;flex-shrink:0}
+  
 
 /* CONTACT CTA */
 .contact-cta{background:linear-gradient(135deg,var(--accent),#5b21b6);border-radius:22px;padding:52px 48px;text-align:center;margin:56px 0;position:relative;overflow:hidden}
