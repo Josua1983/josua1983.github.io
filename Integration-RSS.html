@@ -4,78 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>📰 Integration RSS | Josua</title>
+<title>📰 Integration RSS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
-    background: #f8fafc;
-    color: #0f172a;
-    margin: 0;
-    padding: 50px 20px;
+:root {
+  --bg: #f4f3ff;
+  --surface: #ffffff;
+  --surface2: #f8f7ff;
+  --border: rgba(124,58,237,0.1);
+  --border-strong: rgba(124,58,237,0.22);
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --accent-glow: rgba(124,58,237,0.07);
+  --text: #1e1b4b;
+  --muted: #6b7280;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:50px 20px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
 }
 
-.subtitle {
-    color: #64748b;
-    margin-bottom: 40px;
+.container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:1;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    transition: all 0.25s ease;
+/* typography */
+h1{
+  font-family:'Inter',sans-serif;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border: 1px solid #a78bfa;
-    box-shadow: 0 10px 30px rgba(167,139,250,0.15);
+h2{
+  font-family:'Inter',sans-serif;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
-p, ul {
-    color: #475569;
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
 }
 
-h2 {
-    margin-bottom: 10px;
+p, ul{
+  color:var(--muted);
+  line-height:1.7;
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(147,51,234,0.1);
-    color: #9333ea;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-bottom: 10px;
+/* cards */
+.card{
+  background:var(--surface);
+  padding:26px;
+  margin-top:20px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:.25s;
 }
 
-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 15px;
-    border: 1px solid #e2e8f0;
+.card:hover{
+  transform:translateY(-4px);
+  border:1px solid var(--border-strong);
+  box-shadow:0 10px 30px rgba(124,58,237,0.1);
 }
 
-.back {
-    display: inline-block;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: #9333ea;
-    font-weight: 600;
+/* badge */
+.badge{
+  background:var(--accent-glow);
+  color:var(--accent);
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+/* images */
+img{
+  width:100%;
+  border-radius:12px;
+  margin-top:15px;
+  border:1px solid var(--border);
+}
+
+/* back */
+.back{
+  display:inline-block;
+  margin-bottom:25px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+
+/* button */
+.btn{
+  display:inline-block;
+  background: linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(124,58,237,0.25);
 }
 </style>
 </head>
@@ -84,101 +139,86 @@ img {
 
 <div class="container">
 
-<a href="https://josua1983.github.io/" class="back">← Back to portfolio</a>
+<a href="index.html" class="back">← Back to portfolio</a>
 
 <h1>🧠 📰 Integration RSS</h1>
+
 <p class="subtitle">
 Automatically collects, analyzes, and transforms RSS articles into structured insights using AI.
 </p>
 
-<!-- OVERVIEW -->
 <div class="card">
-    <div class="badge">OVERVIEW</div>
-    <h2>📊 What this system does</h2>
+<div class="badge">OVERVIEW</div>
+<h2>📊 What this system does</h2>
 
-    <p>
-    This automation monitors RSS feeds (e.g. TechCrunch), extracts full article content,
-    and uses AI to generate structured summaries, categories, and relevance scores.
-    </p>
+<p>
+This automation monitors RSS feeds and extracts full article content automatically.
+</p>
+
+<p>
+AI then transforms raw articles into structured summaries, categories, and actionable insights — fully automated.
+</p>
 </div>
 
-<!-- HOW IT WORKS -->
 <div class="card">
-    <div class="badge">PROCESS</div>
-    <h2>⚙️ How it works</h2>
+<div class="badge">PROCESS</div>
+<h2>⚙️ How it works</h2>
 
-    <ul>
-        <li>Detects new articles via RSS feed</li>
-        <li>Fetches full article content via HTTP request</li>
-        <li>Converts raw HTML into clean readable text</li>
-        <li>Uses AI (Gemini) to summarize and classify content</li>
-        <li>Assigns category and relevance score</li>
-        <li>Stores structured data in Google Sheets</li>
-        <li>Generates reports in Google Docs</li>
-    </ul>
+<ul>
+<li>Detects new articles via RSS</li>
+<li>Fetches full article via HTTP</li>
+<li>Cleans HTML → readable text</li>
+<li>AI summarizes and classifies</li>
+<li>Assigns category + relevance</li>
+<li>Stores data in Google Sheets</li>
+<li>Generates reports in Google Docs</li>
+</ul>
 </div>
 
-<!-- TECH STACK -->
 <div class="card">
-    <div class="badge">TECH</div>
-    <h2>🧠 Tech Stack</h2>
-    <ul>
-        <li>Make.com (automation engine)</li>
-        <li>RSS feeds (data source)</li>
-        <li>HTTP module (data extraction)</li>
-        <li>Text Parser (HTML → clean text)</li>
-        <li>Google Gemini (AI analysis)</li>
-        <li>Google Sheets (data storage)</li>
-        <li>Google Docs (report generation)</li>
-    </ul>
+<div class="badge">TECH</div>
+<h2>🧠 Tech Stack</h2>
+
+<ul>
+<li>Make.com</li>
+<li>RSS feeds</li>
+<li>HTTP module</li>
+<li>Text parser</li>
+<li>Gemini AI</li>
+<li>Google Sheets</li>
+<li>Google Docs</li>
+</ul>
 </div>
 
-<!-- SCREENSHOT -->
 <div class="card">
-    <div class="badge">AUTOMATION</div>
-    <h2>🔄 Automation Flow</h2>
+<div class="badge">AUTOMATION</div>
+<h2>🔄 Automation Flow</h2>
 
-    <p>
-    End-to-end automation built in Make.com. Runs continuously and processes new articles without manual work.
-    </p>
+<p>
+End-to-end pipeline that continuously processes new content without manual work.
+</p>
 
-    <img src="rss-flow.png" alt="Make automation flow">
+<img src="rss-flow.png" alt="RSS Flow">
 </div>
 
-<!-- VALUE -->
 <div class="card">
-    <div class="badge">VALUE</div>
-    <h2>💡 Business value</h2>
+<div class="badge">VALUE</div>
+<h2>💡 Business value</h2>
 
-    <ul>
-        <li>Reduces manual research by 80%+</li>
-        <li>Instantly summarizes large volumes of content</li>
-        <li>Identifies trends and relevant topics automatically</li>
-        <li>Creates structured, usable insights for decision-making</li>
-    </ul>
+<ul>
+<li>⚡ 80%+ time saved on research</li>
+<li>🧠 Instant summaries</li>
+<li>📈 Detect trends automatically</li>
+<li>📊 Structured insights for decisions</li>
+</ul>
 </div>
 
-<!-- CTA -->
 <div class="card">
-    <div class="badge">CONTACT</div>
-    <h2>📩 Work With Me</h2>
+<h2>💰 Want this for your business?</h2>
 
-    <p>
-    Want a system like this for your business?
-    </p>
+<p>I build custom AI pipelines that turn information into profit.</p>
 
-    <a href="mailto:your@email.com" style="
-        display:inline-block;
-        margin-top:10px;
-        padding:12px 20px;
-        border-radius:8px;
-        background: linear-gradient(135deg, #9333ea, #c084fc);
-        color:white;
-        text-decoration:none;
-        font-weight:bold;
-    ">
-        Contact Me
-    </a>
+<a href="mailto:josua1983@gmail.com" class="btn">Build this for me</a>
 </div>
 
 </div>
