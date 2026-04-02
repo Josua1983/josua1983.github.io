@@ -6,72 +6,131 @@
 
 <title>AI Trend Radar</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
-    background: #f8fafc;
-    color: #0f172a;
-    margin: 0;
-    padding: 50px 20px;
+:root {
+  --bg: #f4f3ff;
+  --surface: #ffffff;
+  --surface2: #f8f7ff;
+  --border: rgba(124,58,237,0.1);
+  --border-strong: rgba(124,58,237,0.22);
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --accent-glow: rgba(124,58,237,0.07);
+  --text: #1e1b4b;
+  --muted: #6b7280;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:50px 20px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
 }
 
-.subtitle {
-    color: #64748b;
-    margin-bottom: 40px;
+.container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:1;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    transition: 0.25s;
+/* typography */
+h1{
+  font-family:'Inter',sans-serif;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border: 1px solid #a78bfa;
-    box-shadow: 0 10px 30px rgba(167,139,250,0.15);
+h2{
+  font-family:'Inter',sans-serif;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
-p, ul {
-    color: #475569;
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(147,51,234,0.1);
-    color: #9333ea;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-bottom: 10px;
+p, ul{
+  color:var(--muted);
+  line-height:1.7;
 }
 
-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 15px;
-    border: 1px solid #e2e8f0;
+/* cards */
+.card{
+  background:var(--surface);
+  padding:26px;
+  margin-top:20px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:.25s;
 }
 
-.back {
-    display: inline-block;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: #9333ea;
-    font-weight: 600;
+.card:hover{
+  transform:translateY(-4px);
+  border:1px solid var(--border-strong);
+  box-shadow:0 10px 30px rgba(124,58,237,0.1);
+}
+
+/* badge */
+.badge{
+  background:var(--accent-glow);
+  color:var(--accent);
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+/* images */
+img{
+  width:100%;
+  border-radius:12px;
+  margin-top:15px;
+  border:1px solid var(--border);
+}
+
+/* back */
+.back{
+  display:inline-block;
+  margin-bottom:25px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+
+/* button */
+.btn{
+  display:inline-block;
+  background: linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(124,58,237,0.25);
 }
 </style>
 </head>
@@ -80,7 +139,7 @@ img {
 
 <div class="container">
 
-<a href="https://josua1983.github.io/" class="back">← Back to portfolio</a>
+<a href="index.html" class="back">← Back to portfolio</a>
 
 <h1>📡 AI Trend Radar</h1>
 
@@ -88,104 +147,94 @@ img {
 AI-powered system that detects trends, patterns, and business opportunities from large datasets automatically.
 </p>
 
-<!-- OVERVIEW -->
 <div class="card">
 <div class="badge">OVERVIEW</div>
-
 <h2>📊 What this system does</h2>
 
 <p>
-This system analyzes large sets of articles stored in a database and uses AI to identify patterns, trends, and emerging topics.
+This system analyzes large datasets and identifies patterns, trends, and emerging opportunities using AI.
 </p>
 
 <p>
-Instead of manually scanning content, businesses receive structured intelligence including trends, key topics, and opportunities — automatically generated.
+Instead of manually scanning content, you instantly get structured insights about what's happening in your market.
 </p>
-
 </div>
 
-<!-- PROCESS -->
 <div class="card">
 <div class="badge">PROCESS</div>
-
 <h2>⚙️ How it works</h2>
 
 <ul>
-<li>Reads article data from a central database (Google Sheets)</li>
-<li>Processes multiple articles at once</li>
-<li>Uses AI to analyze patterns across content</li>
-<li>Generates structured output:
-    <ul>
-        <li>Top trends</li>
-        <li>Important topics</li>
-        <li>Business opportunities</li>
-        <li>Summary of insights</li>
-    </ul>
+<li>Reads article data from Google Sheets</li>
+<li>Processes multiple data points at once</li>
+<li>AI detects patterns and trends</li>
+<li>Generates structured insights:
+  <ul>
+    <li>Top trends</li>
+    <li>Key topics</li>
+    <li>Opportunities</li>
+    <li>Summaries</li>
+  </ul>
 </li>
-<li>Automatically generates a ready-to-use report (Google Docs)</li>
+<li>Automatically generates reports (Google Docs)</li>
 </ul>
-
 </div>
 
-<!-- SCREENSHOT -->
 <div class="card">
 <div class="badge">AUTOMATION</div>
-
 <h2>🔄 Make.com Scenario</h2>
 
 <p>
-Fully automated workflow that transforms raw data into high-level intelligence reports without manual effort.
+Fully automated pipeline that converts raw data into strategic intelligence without manual effort.
 </p>
 
-<img src="AI-trendradar.png" alt="AI Trend Radar Flow">
-
+<img src="AI-trendradar.png" alt="Trend Radar Flow">
 </div>
 
-<!-- VALUE -->
 <div class="card">
 <div class="badge">BUSINESS VALUE</div>
-
 <h2>💡 Why this matters</h2>
 
 <ul>
-<li>Reduces research and analysis time by 80–90%</li>
-<li>Detects trends before competitors</li>
-<li>Turns raw data into strategic insights</li>
-<li>Supports faster decision-making</li>
-<li>Eliminates manual reporting</li>
+<li>⚡ 80–90% less research time</li>
+<li>🚀 Detect trends before competitors</li>
+<li>📊 Turn data into strategy</li>
+<li>🧠 Faster decision-making</li>
+<li>💸 Direct business advantage</li>
 </ul>
-
 </div>
 
-<!-- USE CASES -->
 <div class="card">
 <div class="badge">USE CASES</div>
-
-<h2>📈 Where businesses use this</h2>
+<h2>📈 Where this is used</h2>
 
 <ul>
 <li>Market intelligence</li>
 <li>Trend monitoring</li>
-<li>Startup & tech scouting</li>
+<li>Startup scouting</li>
 <li>Investment research</li>
 <li>Content strategy</li>
 </ul>
-
 </div>
 
-<!-- TECH -->
 <div class="card">
 <div class="badge">TECH</div>
-
-<h2>🧠 Tech Stack</h2>
+<h2>🧠 Tech stack</h2>
 
 <ul>
-<li>Make.com (automation)</li>
-<li>Google Sheets (data source)</li>
-<li>Google Gemini AI (analysis)</li>
-<li>Google Docs (report generation)</li>
+<li>Make.com</li>
+<li>Google Sheets</li>
+<li>Gemini AI</li>
+<li>Google Docs</li>
 </ul>
+</div>
 
+<div class="card">
+<h2>💰 Want this for your business?</h2>
+
+<p>I build custom AI systems that give you an unfair advantage.</p>
+
+<a href="mailto:josua1983@gmail.com" class="btn">Build this for me</a>
 </div>
 
 </div>
