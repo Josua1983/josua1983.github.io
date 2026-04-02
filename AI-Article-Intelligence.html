@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Trend Radar</title>
+<title>AI Article Intelligence</title>
 
-<!-- FONT (MOET BUITEN STYLE!) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
 <style>
@@ -29,11 +28,10 @@ body{
   font-family:'DM Sans',sans-serif;
   background:var(--bg);
   color:var(--text);
-  margin:0;
   padding:50px 20px;
 }
 
-/* grid achtergrond */
+/* achtergrond grid */
 body::before{
   content:'';
   position:fixed;
@@ -111,7 +109,7 @@ img{
   border:1px solid var(--border);
 }
 
-/* back link */
+/* back */
 .back{
   display:inline-block;
   margin-bottom:25px;
@@ -120,22 +118,84 @@ img{
   font-weight:600;
 }
 
-/* BUTTON FIX */
-a[style],
-button {
-  background: linear-gradient(135deg,#7c3aed,#5b21b6) !important;
-  color:#fff !important;
-  border:none !important;
-  border-radius:10px !important;
-  padding:12px 20px !important;
-  text-decoration:none !important;
-  font-weight:600 !important;
+/* BUTTONS (consistent!) */
+.btn{
   display:inline-block;
+  background: linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
 }
 
-a[style]:hover{
+.btn:hover{
   transform:translateY(-2px);
   box-shadow:0 8px 20px rgba(124,58,237,0.25);
 }
 </style>
 </head>
+
+<body>
+
+<div class="container">
+
+  <a href="index.html" class="back">← Back to home</a>
+
+  <h1>🧠 AI Article Intelligence</h1>
+  <p class="subtitle">
+    Turns raw RSS content into structured summaries and insights using AI — fully automated.
+  </p>
+
+  <div class="card">
+    <div class="badge">DATA PIPELINE</div>
+    <h2>What this system does</h2>
+    <p>
+      This system automatically collects articles from multiple RSS feeds and transforms them into clean,
+      structured summaries using AI. Instead of reading everything manually, you get only what matters.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ul>
+      <li>RSS feeds are fetched automatically</li>
+      <li>Content is cleaned and prepared</li>
+      <li>AI summarizes and extracts key insights</li>
+      <li>Data is stored or sent to Google Docs / Telegram</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Why this matters</h2>
+    <p>
+      Most businesses miss opportunities because they don’t process information fast enough.
+      This system gives you instant insights so you can act before competitors even notice the trend.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Real-world use</h2>
+    <p>
+      Use this system to monitor industry news, competitors, market trends, or niche topics.
+      It runs 24/7 without manual effort and keeps you ahead automatically.
+    </p>
+
+    <!-- vervang met jouw echte image -->
+    <img src="images/ai-article-intelligence.png" alt="AI Article Intelligence Preview">
+  </div>
+
+  <div class="card">
+    <h2>Want this for your business?</h2>
+    <p>
+      I can build a custom version tailored to your industry, data sources, and workflows.
+    </p>
+
+    <a href="mailto:josua1983@gmail.com" class="btn">💰 Build this for me</a>
+  </div>
+
+</div>
+
+</body>
+</html>
