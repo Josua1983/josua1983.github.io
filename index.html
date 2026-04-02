@@ -1,160 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josua Boon | AI Automation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josua Boon | AI Automation Engineer</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- FIXED FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: #f7f7fb;
-      color: #1f1f2e;
-    }
+<style>
+:root {
+  --accent: #7c3aed;
+  --accent-dark: #5b21b6;
+  --bg: #f4f3ff;
+  --text: #1e1b4b;
+  --muted: #6b7280;
+  --border: rgba(124,58,237,0.1);
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:1000px;margin:auto;padding:0 24px}
 
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
+h1,h2,h3{font-family:'Outfit',sans-serif;letter-spacing:-0.5px}
 
-    p {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
-    }
+/* BUTTON FIX */
+.btn{
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+  display:inline-block;
+  transition:.2s;
+}
 
-    /* CTA SECTION */
-    .cta {
-      background: linear-gradient(135deg, #7c3aed, #5b21b6);
-      border-radius: 20px;
-      padding: 60px 40px;
-      text-align: center;
-      color: white;
-      margin-top: 60px;
-    }
+.btn-primary{
+  background:linear-gradient(135deg,#7c3aed,#6d28d9);
+  color:#fff;
+}
 
-    .cta p {
-      color: rgba(255,255,255,0.85);
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(124,58,237,0.25);
+}
 
-    .buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+.btn-secondary{
+  border:1px solid rgba(124,58,237,0.3);
+  color:var(--accent);
+}
 
-    .btn {
-      padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.2s ease;
-    }
+.btn-secondary:hover{
+  background:rgba(124,58,237,0.08);
+}
 
-    .btn-primary {
-      background: white;
-      color: #6d28d9;
-    }
+/* HERO */
+.hero{padding:90px 0 60px}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{color:var(--muted);max-width:600px;margin-bottom:30px}
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+/* PROJECTS */
+.project-card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:20px;
+  border:1px solid var(--border);
+}
 
-    .btn-secondary {
-      background: rgba(255,255,255,0.15);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-    }
+.project-card h2{font-size:20px;margin-bottom:10px}
+.project-card p{color:var(--muted);margin-bottom:10px}
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.25);
-    }
+/* CTA FIX */
+.cta{
+  background:linear-gradient(135deg,#7c3aed,#5b21b6);
+  border-radius:20px;
+  padding:60px 40px;
+  text-align:center;
+  color:#fff;
+  margin:60px 0;
+}
 
-    /* PROJECT CARDS */
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-    }
+.cta p{opacity:.85;margin-bottom:30px}
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 20px;
-      font-weight: 600;
-    }
+.btn-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-    .card ul {
-      padding-left: 20px;
-      color: #555;
-    }
-
-    .card .btn {
-      margin-top: 15px;
-    }
-
-  </style>
+</style>
 </head>
-
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- PROJECT -->
-    <div class="card">
-      <h3>AI Trend Radar</h3>
-      <p>Detects trends early using automated data collection and AI analysis.</p>
-      <ul>
-        <li>Automated data scraping</li>
-        <li>AI-generated reports</li>
-        <li>Insights delivered to Google Docs</li>
-      </ul>
-      <a href="#" class="btn btn-primary">🚀 View Full Breakdown</a>
-    </div>
+<!-- HERO (BEST POSITION = TOP) -->
+<section class="hero">
+<h1>I build AI systems that make money.</h1>
+<p>If your business depends on leads, speed, or data — you're likely losing revenue every day.</p>
+<div class="btn-group">
+<a href="#contact" class="btn btn-primary">🚀 Start Your Automation</a>
+<a href="#projects" class="btn btn-secondary">View Projects</a>
+<a href="Josua_Boon_CV.pdf" class="btn btn-secondary">Download CV</a>
+</div>
+</section>
 
-    <div class="card">
-      <h3>Telegram Alert System</h3>
-      <p>Real-time AI alerts for high-value opportunities.</p>
-      <a href="#" class="btn btn-primary">🚀 View Breakdown</a>
-    </div>
+<!-- PROJECTS -->
+<section id="projects">
 
-    <!-- CTA -->
-    <div class="cta">
-      <h1>Let’s build something that makes you money.</h1>
-      <p>
-        If your business depends on leads, speed, or data, you’re likely losing revenue every day.
-        I build AI systems that capture, qualify, and convert opportunities automatically.
-      </p>
+<div class="project-card">
+<h2>AI Lead Qualification System</h2>
+<p>Automatically classifies and routes leads in real-time.</p>
+<a href="#" class="btn btn-primary">View Full Breakdown</a>
+</div>
 
-      <div class="buttons">
-        <a href="#" class="btn btn-primary">🚀 Start Your Automation</a>
-        <a href="mailto:josua1983@gmail.com" class="btn btn-secondary">📩 Email Me</a>
-        <a href="#" class="btn btn-secondary">🔗 LinkedIn</a>
-      </div>
-    </div>
+<div class="project-card">
+<h2>AI Review Intelligence</h2>
+<p>Turns reviews into insights automatically.</p>
+<a href="#" class="btn btn-primary">View Full Breakdown</a>
+</div>
 
-  </div>
+<div class="project-card">
+<h2>AI Trend Radar</h2>
+<p>Detects trends early using AI.</p>
+<a href="#" class="btn btn-primary">View Full Breakdown</a>
+</div>
+
+</section>
+
+<!-- CTA (KEPT BUT SIMPLER) -->
+<section id="contact" class="cta">
+<h2>Let’s build something that makes you money.</h2>
+<p>Fast response. No missed opportunities. Fully automated systems.</p>
+<div class="btn-group">
+<a href="mailto:josua1983@gmail.com" class="btn btn-primary">📩 Email Me</a>
+<a href="#" class="btn btn-secondary">LinkedIn</a>
+</div>
+</section>
+
+</div>
 
 </body>
-</
+</html>
