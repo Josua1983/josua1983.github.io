@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Josua Boon | AI Automation Engineer</title>
 
-<!-- FIXED FONTS -->
+<!-- FIXED FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
 <style>
@@ -20,17 +20,15 @@
   --accent-glow: rgba(124,58,237,0.07);
   --text: #1e1b4b;
   --muted: #6b7280;
-  --green: #059669;
-  --green-bg: rgba(5,150,105,0.07);
-  --green-border: rgba(5,150,105,0.2);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text)}
+
 .container{max-width:900px;margin:0 auto;padding:0 24px}
 
 /* NAV */
-nav{position:sticky;top:0;background:rgba(244,243,255,0.95);border-bottom:1px solid var(--border)}
+nav{position:sticky;top:0;background:rgba(244,243,255,0.92);border-bottom:1px solid var(--border)}
 nav .container{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
 .nav-logo{font-family:'Outfit',sans-serif;font-weight:700;color:var(--accent)}
 .nav-links{display:flex;gap:28px;list-style:none}
@@ -40,14 +38,14 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .hero{padding:80px 0}
 h1{
   font-family:'Outfit',sans-serif;
-  font-size:clamp(36px,6vw,58px);
+  font-size:clamp(34px,6vw,60px);
   font-weight:700;
-  line-height:1.1;
+  line-height:1.08;
   letter-spacing:-1px;
 }
-.hero-sub{margin-top:16px;color:var(--muted);max-width:520px}
+.hero-sub{margin-top:20px;color:var(--muted);max-width:520px}
 
-/* BUTTON FIX */
+/* BUTTON FIX (GLOBAL CONSISTENCY) */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -65,54 +63,67 @@ h1{
 .btn:hover{
   background:#5b21b6;
   transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(124,58,237,0.25);
 }
 
-/* FORCE CONSISTENCY */
+/* FORCE ALL BUTTON TYPES SAME */
 .btn-outline,
 .btn-white,
 .btn-ghost{
-  background:var(--accent) !important;
-  color:#fff !important;
-  border:none !important;
+  background:var(--accent);
+  color:#fff;
+  border:none;
 }
 
-/* SECTION */
-.section{padding:50px 0}
+/* SECTIONS */
+.section{padding:56px 0}
 .section-title{
   font-family:'Outfit',sans-serif;
-  font-size:26px;
+  font-size:28px;
   font-weight:700;
 }
 
-/* PROJECT CARD */
+/* PROJECTS */
 .project-card{
-  background:#fff;
-  padding:24px;
-  border-radius:16px;
+  background:var(--surface);
   border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
   margin-bottom:16px;
 }
 .project-card h2{
   font-family:'Outfit',sans-serif;
-  font-size:18px;
+  font-size:20px;
+  margin-bottom:10px;
+}
+.project-card p{
+  color:var(--muted);
+  margin-bottom:14px;
 }
 
 /* CTA */
 .contact-cta{
   background:linear-gradient(135deg,var(--accent),#5b21b6);
-  padding:40px;
-  border-radius:20px;
+  border-radius:22px;
+  padding:50px;
   text-align:center;
   color:#fff;
 }
 .contact-cta h2{
   font-family:'Outfit',sans-serif;
-  font-size:26px;
-  font-weight:700;
+  font-size:28px;
+}
+.contact-cta p{
+  margin-top:10px;
+  opacity:.9;
 }
 
-/* FOOTER */
-footer{padding:20px;text-align:center;color:var(--muted)}
+footer{
+  border-top:1px solid var(--border);
+  padding:24px;
+  text-align:center;
+  color:var(--muted);
+}
 </style>
 </head>
 
@@ -136,10 +147,10 @@ footer{padding:20px;text-align:center;color:var(--muted)}
       Most businesses lose leads and revenue because they react too late. I build systems that respond instantly.
     </p>
 
-    <div style="margin-top:24px;display:flex;gap:12px;">
-      <a class="btn">Get In Touch</a>
-      <a class="btn">View Projects</a>
-      <a class="btn">Download CV</a>
+    <div style="margin-top:30px;display:flex;gap:12px;">
+      <a href="#" class="btn">Get In Touch</a>
+      <a href="#" class="btn">View Projects</a>
+      <a href="#" class="btn">Download CV</a>
     </div>
   </div>
 </section>
@@ -151,19 +162,19 @@ footer{padding:20px;text-align:center;color:var(--muted)}
     <div class="project-card">
       <h2>AI Lead Qualification System</h2>
       <p>Automatically analyzes and routes leads in real-time.</p>
-      <a class="btn">View Breakdown</a>
+      <a href="#" class="btn">View Breakdown</a>
     </div>
 
     <div class="project-card">
       <h2>AI Review Intelligence</h2>
       <p>Transforms reviews into insights and flags problems instantly.</p>
-      <a class="btn">View Breakdown</a>
+      <a href="#" class="btn">View Breakdown</a>
     </div>
 
     <div class="project-card">
       <h2>AI Trend Radar</h2>
       <p>Detects trends early using automated data pipelines.</p>
-      <a class="btn">View Breakdown</a>
+      <a href="#" class="btn">View Breakdown</a>
     </div>
 
   </div>
@@ -173,21 +184,21 @@ footer{padding:20px;text-align:center;color:var(--muted)}
   <div class="container">
     <div class="contact-cta">
       <h2>Let's build something that makes you money.</h2>
-      <p style="margin-top:10px;">
-        If your business runs on leads or data, you're probably leaving revenue on the table.
+      <p>
+        If your business runs on leads, data, or speed — you're probably leaving revenue on the table.
       </p>
 
       <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;">
-        <a class="btn">Email</a>
-        <a class="btn">LinkedIn</a>
-        <a class="btn">Download CV</a>
+        <a href="mailto:josua1983@gmail.com" class="btn">Email</a>
+        <a href="#" class="btn">LinkedIn</a>
+        <a href="#" class="btn">Download CV</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  Josua Boon — Bali
+  Josua Boon — Bali, Indonesia
 </footer>
 
 </body>
