@@ -134,44 +134,30 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center}
 footer p{color:var(--muted);font-size:13px}
 footer a{color:var(--accent);text-decoration:none}
 
-@media(max-width:700px){
-  .about-grid{grid-template-columns:1fr}
-  .about-card.full{grid-column:1}
-  .services-grid{grid-template-columns:1fr}
-  .projects-other{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:1fr}
-  .case-grid{grid-template-columns:1fr}
-  .contact-cta{padding:32px 20px}
-  nav .nav-links{display:none}
-/* FIX FONT (minder chunky) */
-h1,
-.section-title,
-.project-card h2,
-.service-card h3,
-.contact-cta h2,
-.nav-logo {
-  font-family: 'Inter', sans-serif !important;
-  letter-spacing: -0.5px !important;
-  font-weight: 700 !important;
-}
+/* === FORCE ALL BUTTONS SAME STYLE === */
 
-/* BUTTON CONSISTENCY FIX */
 .btn,
 .btn-primary,
 .btn-outline,
 .btn-white,
-.btn-ghost {
-  background: var(--accent) !important;
+.btn-ghost,
+.project-card .btn,
+.project-small .btn,
+.contact-cta .btn {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6) !important;
   color: #fff !important;
   border: none !important;
 }
 
-/* HOVER consistent */
+/* hover consistent */
 .btn:hover,
 .btn-primary:hover,
 .btn-outline:hover,
 .btn-white:hover,
-.btn-ghost:hover {
+.btn-ghost:hover,
+.project-card .btn:hover,
+.project-small .btn:hover,
+.contact-cta .btn:hover {
   background: #5b21b6 !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(124,58,237,0.25);
