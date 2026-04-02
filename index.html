@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Josua Boon | AI Automation Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #f4f3ff;
@@ -143,6 +143,38 @@ footer a{color:var(--accent);text-decoration:none}
   .case-grid{grid-template-columns:1fr}
   .contact-cta{padding:32px 20px}
   nav .nav-links{display:none}
+/* FIX FONT (minder chunky) */
+h1,
+.section-title,
+.project-card h2,
+.service-card h3,
+.contact-cta h2,
+.nav-logo {
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: -0.5px !important;
+  font-weight: 700 !important;
+}
+
+/* BUTTON CONSISTENCY FIX */
+.btn,
+.btn-primary,
+.btn-outline,
+.btn-white,
+.btn-ghost {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+/* HOVER consistent */
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-white:hover,
+.btn-ghost:hover {
+  background: #5b21b6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124,58,237,0.25);
 }
 </style>
 </head>
