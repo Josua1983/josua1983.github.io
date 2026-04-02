@@ -4,392 +4,187 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Josua Boon | AI Automation Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<!-- BETERE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg: #f4f3ff;
   --surface: #ffffff;
-  --surface2: #f8f7ff;
   --border: rgba(124,58,237,0.1);
   --border-strong: rgba(124,58,237,0.22);
   --accent: #7c3aed;
-  --accent-light: #a78bfa;
-  --accent-glow: rgba(124,58,237,0.07);
   --text: #1e1b4b;
   --muted: #6b7280;
-  --green: #059669;
-  --green-bg: rgba(5,150,105,0.07);
-  --green-border: rgba(5,150,105,0.2);
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0}
-.container{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
 
-nav{position:sticky;top:0;z-index:100;background:rgba(244,243,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:16px 0}
-nav .container{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--accent);text-decoration:none}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
-.nav-links a:hover{color:var(--accent)}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-.hero{padding:88px 0 64px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-glow);border:1px solid var(--border-strong);padding:6px 14px;border-radius:100px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
-.dot{width:6px;height:6px;background:#10b981;border-radius:50%;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(34px,6vw,60px);font-weight:800;line-height:1.08;letter-spacing:-2px;margin-bottom:22px}
-h1 .acc{color:var(--accent)}
-.hero-sub{font-size:17px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:36px;font-weight:300}
-.hero-sub strong{color:var(--text);font-weight:500}
-.btn-group{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:#5b21b6;transform:translateY(-2px);box-shadow:0 8px 20px rgba(124,58,237,0.25)}
-.btn-outline{background:transparent;color:var(--accent);border:1px solid var(--border-strong)}
-.btn-outline:hover{background:var(--accent-glow);transform:translateY(-2px)}
+h1,h2,h3{
+  font-family:'Outfit',sans-serif;
+  letter-spacing:-0.5px;
+}
 
-.divider{height:1px;background:var(--border)}
+/* NAV */
+nav{
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+}
 
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:40px 0}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center}
-.stat-number{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent);margin-bottom:5px}
-.stat-label{font-size:12px;color:var(--muted)}
+nav a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
 
-.section{padding:56px 0}
-.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.section-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
-.section-sub{color:var(--muted);font-size:15px;font-weight:300;margin-bottom:32px;line-height:1.65}
+/* HERO */
+.hero{
+  padding:80px 20px;
+  max-width:900px;
+  margin:auto;
+}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
-.about-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px}
-.about-card.full{grid-column:1/-1}
-.about-card p{color:var(--muted);line-height:1.8;font-size:14px;font-weight:300}
-.about-card p+p{margin-top:10px}
-.about-card strong{color:var(--text);font-weight:500}
-.about-card h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:14px;color:var(--accent)}
-.tech-grid{display:flex;flex-wrap:wrap;gap:7px}
-.tech-badge{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--border);padding:5px 11px;border-radius:7px;font-size:12px;font-weight:500;color:var(--text);transition:all .2s}
-.tech-badge:hover{border-color:var(--accent);color:var(--accent)}
-.tech-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-light);flex-shrink:0}
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:30px;
+}
+
+/* BUTTONS (FIXED) */
+.btn{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-block;
+  margin-right:10px;
+  font-weight:600;
+}
+
+.btn:hover{
+  background:#5b21b6;
+}
+
+/* SECTION */
+.section{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
 
 /* PROJECTS */
-.project-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:30px;margin-bottom:16px;transition:all .3s;position:relative;overflow:hidden}
-.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent-light),transparent);opacity:0;transition:opacity .3s}
-.project-card:hover{border-color:var(--border-strong);transform:translateY(-4px);box-shadow:0 14px 36px rgba(124,58,237,0.1)}
-.project-card:hover::before,.project-card.featured::before{opacity:1}
-.project-card.featured{border-color:var(--border-strong);background:linear-gradient(135deg,#fff,rgba(124,58,237,0.025))}
-.project-badge{display:inline-block;background:var(--accent-glow);color:var(--accent);border:1px solid var(--border-strong);padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
-.project-card h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px;letter-spacing:-0.5px}
-.project-card p{color:var(--muted);line-height:1.7;font-size:14px;margin-bottom:12px;font-weight:300}
-.project-card ul{color:var(--muted);padding-left:0;list-style:none;margin-bottom:20px}
-.project-card ul li{padding:4px 0;font-size:13px;display:flex;align-items:center;gap:9px}
-.project-card ul li::before{content:'';width:4px;height:4px;background:var(--accent-light);border-radius:50%;flex-shrink:0}
-.projects-other{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-.project-small{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;transition:all .3s}
-.project-small:hover{border-color:var(--border-strong);transform:translateY(-3px);box-shadow:0 8px 24px rgba(124,58,237,0.08)}
-.project-small .project-badge{margin-bottom:10px}
-.project-small h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px}
-.project-small p{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;font-weight:300}
-.project-empty{background:var(--surface2);border:1px dashed rgba(124,58,237,0.15);border-radius:14px;padding:22px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;min-height:150px}
-.project-empty p{color:var(--muted);font-size:13px;text-align:center}
+.project{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+  border:1px solid var(--border);
+}
 
-/* CASE STUDY */
-.case-study{background:linear-gradient(135deg,var(--surface),rgba(124,58,237,0.04));border:1px solid var(--border-strong);border-radius:20px;padding:36px;margin-top:32px}
-.case-study h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:6px;letter-spacing:-0.5px}
-.client-tag{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:22px;display:block}
-.case-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0}
-.case-block{background:rgba(124,58,237,0.03);border:1px solid var(--border);border-radius:12px;padding:18px}
-.case-block h4{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.case-block p{color:var(--muted);font-size:13px;line-height:1.65;font-weight:300}
-.results-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
-.result-pill{background:var(--green-bg);border:1px solid var(--green-border);color:var(--green);padding:7px 14px;border-radius:100px;font-size:12px;font-weight:600}
+.project h3{
+  margin-bottom:10px;
+}
 
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.service-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all .3s}
-.service-card:hover{border-color:var(--border-strong);transform:translateY(-4px);box-shadow:0 12px 32px rgba(124,58,237,0.1)}
-.service-card.popular{border-color:var(--accent);background:linear-gradient(135deg,#fff,rgba(124,58,237,0.04));position:relative}
-.popular-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:.5px;white-space:nowrap}
-.service-icon{font-size:24px;margin-bottom:12px}
-.service-card h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:5px}
-.service-price{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px}
-.service-card p{color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:12px;font-weight:300}
-.service-card ul{list-style:none;padding:0}
-.service-card ul li{color:var(--muted);font-size:12px;padding:4px 0;display:flex;align-items:center;gap:8px}
-.service-card ul li::before{content:'✓';color:var(--accent);font-weight:700;font-size:11px;flex-shrink:0}
+.project p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
 
-/* CONTACT CTA */
-.contact-cta{background:linear-gradient(135deg,var(--accent),#5b21b6);border-radius:22px;padding:52px 48px;text-align:center;margin:56px 0;position:relative;overflow:hidden}
-.contact-cta::after{content:'';position:absolute;bottom:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,0.05);border-radius:50%}
-.contact-cta h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:12px;position:relative}
-.contact-cta p{color:rgba(255,255,255,0.75);font-size:15px;font-weight:300;line-height:1.7;margin-bottom:28px;position:relative}
-.contact-cta .btn-white{background:#fff;color:var(--accent);font-weight:700}
-.contact-cta .btn-white:hover{background:rgba(255,255,255,0.92);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.15)}
-.contact-cta .btn-ghost{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.25)}
-.contact-cta .btn-ghost:hover{background:rgba(255,255,255,0.2);transform:translateY(-2px)}
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  border-radius:20px;
+  margin:60px auto;
+  max-width:900px;
+}
 
-footer{border-top:1px solid var(--border);padding:28px 0;text-align:center}
-footer p{color:var(--muted);font-size:13px}
-footer a{color:var(--accent);text-decoration:none}
+.cta h2{
+  margin-bottom:15px;
+}
 
-@media(max-width:700px){
-  .about-grid{grid-template-columns:1fr}
-  .about-card.full{grid-column:1}
-  .services-grid{grid-template-columns:1fr}
-  .projects-other{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:1fr}
-  .case-grid{grid-template-columns:1fr}
-  .contact-cta{padding:32px 20px}
-  nav .nav-links{display:none}
+.cta p{
+  margin-bottom:25px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
 }
 </style>
 </head>
+
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="container">
-    <a href="#" class="nav-logo">Josua Boon</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+  <a href="#">Josua Boon</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-badge"><span class="dot"></span> Available for new projects</div>
-    <h1>I build <span class="acc">AI systems</span><br>that make money.</h1>
-    <p class="hero-sub">Most businesses lose leads, insights, and revenue because they <strong>react too late</strong>. I fix that with Make.com automation that thinks, analyzes, and acts instantly.</p>
-    <div class="btn-group">
-      <a href="#contact" class="btn btn-primary">&#128233; Get In Touch</a>
-      <a href="#projects" class="btn btn-outline">&#128640; View Projects</a>
-      <a href="Josua_Boon_CV.pdf" target="_blank" class="btn btn-outline">&#128196; Download CV</a>
-    </div>
-  </div>
+  <h1>I build AI systems that make money.</h1>
+  <p>Most businesses lose leads and revenue because they react too late. I build systems that respond instantly.</p>
+
+  <a href="#contact" class="btn">Get In Touch</a>
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="Josua_Boon_CV.pdf" class="btn">Download CV</a>
 </section>
 
-<div class="container">
-  <div class="divider"></div>
-  <div class="stats-row">
-    <div class="stat-card"><div class="stat-number">6+</div><div class="stat-label">Automation systems built</div></div>
-    <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Years tech experience</div></div>
-    <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">Remote &amp; async friendly</div></div>
-  </div>
-  <div class="divider"></div>
-</div>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-label">About</div>
-    <div class="section-title">Who I am</div>
-    <div class="about-grid">
-      <div class="about-card full">
-        <p>I'm <strong>Josua Boon</strong> — an AI Automation Engineer based in <strong>Bali, Indonesia</strong>, combining a decade of cybersecurity and network operations experience with real-world business ownership.</p>
-        <p>Before building automations, I spent years as a <strong>SOC Analyst at the Dutch government (SVB)</strong> — monitoring infrastructure, detecting threats, and improving system processes. That background taught me one thing: systems that react slowly cost money.</p>
-        <p>Today I apply that same mindset to business automation — building Make.com workflows that capture leads, analyze data, and deliver real-time insights. I also run my own restaurant in Bali, so I build these systems for myself first. <strong>They work.</strong></p>
-      </div>
-      <div class="about-card">
-        <h3>&#128296; Tech Stack</h3>
-        <div class="tech-grid">
-          <span class="tech-badge"><span class="tech-dot"></span>Make.com</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Google Gemini AI</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Apify</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Telegram API</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Google Sheets</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Google Docs</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Webhooks</span>
-          <span class="tech-badge"><span class="tech-dot"></span>REST APIs</span>
-          <span class="tech-badge"><span class="tech-dot"></span>RSS</span>
-          <span class="tech-badge"><span class="tech-dot"></span>JSON</span>
-        </div>
-      </div>
-      <div class="about-card">
-        <h3>&#127881; Certifications</h3>
-        <div class="tech-grid">
-          <span class="tech-badge"><span class="tech-dot"></span>Postman API</span>
-          <span class="tech-badge"><span class="tech-dot"></span>HubSpot Marketing</span>
-          <span class="tech-badge"><span class="tech-dot"></span>CCNA</span>
-          <span class="tech-badge"><span class="tech-dot"></span>CompTIA Security+</span>
-          <span class="tech-badge"><span class="tech-dot"></span>Splunk Advanced</span>
-          <span class="tech-badge"><span class="tech-dot"></span>IBM QRadar</span>
-          <span class="tech-badge"><span class="tech-dot"></span>SC-900 Microsoft</span>
-          <span class="tech-badge"><span class="tech-dot"></span>ITIL</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
-
+<!-- PROJECTS -->
 <section class="section" id="projects">
-  <div class="container">
-    <div class="section-label">Work</div>
-    <div class="section-title">Featured Projects</div>
-    <p class="section-sub">Real systems — not demos. Click any project to see the full breakdown.</p>
+  <h2>Projects</h2>
 
-    <div class="project-card featured">
-      <div class="project-badge">AI AUTOMATION &#183; REAL-TIME</div>
-      <h2>&#129302; AI Lead Qualification &amp; Routing System</h2>
-      <p>Automatically analyzes, classifies, and routes incoming leads in real-time. Eliminates manual triage and ensures immediate action on high-value opportunities.</p>
-      <p><strong>Business impact:</strong> Most businesses lose 30&#8211;70% of leads by responding too late. This system reduces response time to near zero.</p>
-      <ul>
-        <li>Instant HOT / WARM / COLD classification via Gemini AI</li>
-        <li>Real-time Telegram notifications per lead category</li>
-        <li>Zero manual intervention — fully automated pipeline</li>
-      </ul>
-      <a href="AI-Lead-System.html" class="btn btn-primary">&#128640; View Full Breakdown</a>
-    </div>
-
-    <div class="project-card featured">
-      <div class="project-badge">AI SYSTEM &#183; ANALYTICS</div>
-      <h2>&#9881;&#65039; AI Review Intelligence System</h2>
-      <p>Transforms customer feedback into structured business insights automatically. Built and running at my own restaurant in Bali.</p>
-      <ul>
-        <li>Apify scrapes reviews automatically on schedule</li>
-        <li>Gemini AI detects patterns, urgency, and sentiment</li>
-        <li>Summaries delivered to Google Docs + Telegram</li>
-        <li>Negative reviews flagged for immediate response</li>
-      </ul>
-      <a href="AI-Review-Intelligence.html" class="btn btn-primary">&#128640; View Full Breakdown</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-badge">AI SYSTEM &#183; STRATEGY</div>
-      <h2>&#128225; AI Trend Radar</h2>
-      <p>Monitors data sources and surfaces emerging trends early. Supports strategic decisions based on signals, not guesswork.</p>
-      <ul>
-        <li>Automated data collection and AI analysis on schedule</li>
-        <li>Trend reports generated and delivered to Google Docs</li>
-        <li>Early detection of patterns before they become obvious</li>
-      </ul>
-      <a href="AI-Trend-Radar.html" class="btn btn-outline">&#128640; View Full Breakdown</a>
-    </div>
-
-    <div class="section-label" style="margin-top:44px;margin-bottom:14px">Also built</div>
-    <div class="projects-other">
-      <div class="project-small">
-        <div class="project-badge">AUTOMATION</div>
-        <h3>&#128242; Telegram Alert System</h3>
-        <p>Real-time alerts pushing AI-generated insights directly to Telegram the moment they're ready.</p>
-        <a href="Telegram-Alerts.html" class="btn btn-outline" style="font-size:12px;padding:9px 14px">View Breakdown</a>
-      </div>
-      <div class="project-small">
-        <div class="project-badge">DATA PIPELINE</div>
-        <h3>&#129504; AI Article Intelligence</h3>
-        <p>Turns raw RSS content into structured summaries and insights using AI — fully automated.</p>
-        <a href="AI-Article-Intelligence.html" class="btn btn-outline" style="font-size:12px;padding:9px 14px">View Breakdown</a>
-      </div>
-      <div class="project-small">
-        <div class="project-badge">INGESTION</div>
-        <h3>&#128240; Integration RSS</h3>
-        <p>Automated RSS ingestion feeding AI pipelines for real-time content processing and analysis.</p>
-        <a href="Integration-RSS.html" class="btn btn-outline" style="font-size:12px;padding:9px 14px">View Breakdown</a>
-      </div>
-      <div class="project-empty">
-        <div style="font-size:20px;color:#c4b5fd">+</div>
-        <p>More coming soon</p>
-      </div>
-    </div>
+  <div class="project">
+    <h3>AI Lead Qualification System</h3>
+    <p>Automatically analyzes and routes leads in real-time. No manual work.</p>
+    <a href="#" class="btn">View Breakdown</a>
   </div>
+
+  <div class="project">
+    <h3>AI Review Intelligence</h3>
+    <p>Transforms reviews into insights and flags problems instantly.</p>
+    <a href="#" class="btn">View Breakdown</a>
+  </div>
+
+  <div class="project">
+    <h3>AI Trend Radar</h3>
+    <p>Detects trends early using automated data pipelines.</p>
+    <a href="#" class="btn">View Breakdown</a>
+  </div>
+
 </section>
 
-<div class="container"><div class="divider"></div></div>
+<!-- CTA (GOED ONDERAAN LATEN) -->
+<section class="cta" id="contact">
+  <h2>Let’s build something that makes you money.</h2>
+  <p>If your business depends on speed or leads, you're leaving money on the table.</p>
 
-<section class="section" id="casestudy">
-  <div class="container">
-    <div class="section-label">Case Study</div>
-    <div class="section-title">Automation in the real world</div>
-    <p class="section-sub">Not a demo. A system I built for my own business that I use every day.</p>
-    <div class="case-study">
-      <h3>AI Review Intelligence @ Bakso Kotak Niken</h3>
-      <span class="client-tag">&#128205; Denpasar, Bali &#183; Restaurant &#183; Owner-operated</span>
-      <div class="case-grid">
-        <div class="case-block"><h4>The Problem</h4><p>Reviews checked manually one by one. Easy to miss patterns. Negative feedback could sit unnoticed for days. No data-driven insight.</p></div>
-        <div class="case-block"><h4>The Solution</h4><p>Make.com + Apify + Gemini AI pipeline. Reviews collected, analyzed, and delivered as structured summaries to Telegram and Google Docs — hands-free.</p></div>
-        <div class="case-block"><h4>The Result</h4><p>Zero manual monitoring. Negative reviews flagged within minutes. Recurring patterns surface automatically. Decisions based on real data.</p></div>
-      </div>
-      <div class="results-row">
-        <span class="result-pill">&#10003; Manual monitoring eliminated</span>
-        <span class="result-pill">&#10003; Negative reviews flagged in minutes</span>
-        <span class="result-pill">&#10003; Data-driven decisions</span>
-        <span class="result-pill">&#10003; Zero ongoing effort</span>
-      </div>
-    </div>
-  </div>
+  <a href="mailto:josua1983@gmail.com" class="btn">Email Me</a>
+  <a href="https://linkedin.com" class="btn">LinkedIn</a>
 </section>
 
-<div class="container"><div class="divider"></div></div>
-
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-label">Services</div>
-    <div class="section-title">What I can build for you</div>
-    <p class="section-sub">No code on your end. You describe the problem, I build the system.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">&#9889;</div>
-        <h3>Starter Automation</h3>
-        <div class="service-price">Starting from $150</div>
-        <p>One focused workflow. Ideal to test what automation can do for your business.</p>
-        <ul>
-          <li>Single Make.com scenario</li>
-          <li>1&#8211;2 integrations</li>
-          <li>Basic notifications</li>
-          <li>Delivery in 3&#8211;5 days</li>
-        </ul>
-      </div>
-      <div class="service-card popular">
-        <div class="popular-tag">Most Popular</div>
-        <div class="service-icon">&#129302;</div>
-        <h3>AI Automation System</h3>
-        <div class="service-price">Starting from $350</div>
-        <p>Full AI-powered pipeline. Data in, insights out — automatically. This is what I build best.</p>
-        <ul>
-          <li>Multi-step Make.com scenario</li>
-          <li>AI analysis (Gemini / OpenAI)</li>
-          <li>Real-time Telegram alerts</li>
-          <li>Google Sheets / Docs output</li>
-          <li>Delivery in 5&#8211;10 days</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">&#128200;</div>
-        <h3>Custom System</h3>
-        <div class="service-price">Let's talk</div>
-        <p>Bigger scope, multiple workflows, or ongoing support. You define the problem.</p>
-        <ul>
-          <li>Multiple scenarios</li>
-          <li>Custom logic &amp; routing</li>
-          <li>API / CRM integrations</li>
-          <li>Maintenance option</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container" id="contact">
-  <div class="contact-cta">
-    <h2>Let's build something that<br>makes you money.</h2>
-    <p>If your business runs on leads, data, or speed — you're probably leaving revenue on the table.<br>Send me a message and let's talk about what we can automate.</p>
-    <div class="btn-group" style="justify-content:center">
-      <a href="mailto:josua1983@gmail.com" class="btn btn-white">&#128233; josua1983@gmail.com</a>
-      <a href="https://www.linkedin.com/in/josuaboon" target="_blank" class="btn btn-ghost">&#128101; LinkedIn</a>
-      <a href="Josua_Boon_CV.pdf" target="_blank" class="btn btn-ghost">&#128196; Download CV</a>
-    </div>
-  </div>
-</div>
-
+<!-- FOOTER -->
 <footer>
-  <div class="container">
-    <p>Josua Boon &mdash; Bali, Indonesia &mdash; <a href="mailto:josua1983@gmail.com">josua1983@gmail.com</a></p>
-  </div>
+  Josua Boon — Bali, Indonesia
 </footer>
 
 </body>
