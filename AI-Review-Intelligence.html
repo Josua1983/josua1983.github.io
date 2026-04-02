@@ -6,60 +6,131 @@
 
 <title>AI Review Intelligence System</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
-    background: #f8fafc;
-    color: #0f172a;
-    margin: 0;
-    padding: 50px 20px;
+:root {
+  --bg: #f4f3ff;
+  --surface: #ffffff;
+  --surface2: #f8f7ff;
+  --border: rgba(124,58,237,0.1);
+  --border-strong: rgba(124,58,237,0.22);
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --accent-glow: rgba(124,58,237,0.07);
+  --text: #1e1b4b;
+  --muted: #6b7280;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:50px 20px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
 }
 
-.subtitle {
-    color: #64748b;
-    margin-bottom: 40px;
+.container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:1;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
+/* typography */
+h1{
+  font-family:'Inter',sans-serif;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(147,51,234,0.1);
-    color: #9333ea;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-bottom: 10px;
+h2{
+  font-family:'Inter',sans-serif;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 15px;
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
 }
 
-.back {
-    display: inline-block;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: #9333ea;
-    font-weight: 600;
+p, ul{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* cards */
+.card{
+  background:var(--surface);
+  padding:26px;
+  margin-top:20px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border:1px solid var(--border-strong);
+  box-shadow:0 10px 30px rgba(124,58,237,0.1);
+}
+
+/* badge */
+.badge{
+  background:var(--accent-glow);
+  color:var(--accent);
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+/* images */
+img{
+  width:100%;
+  border-radius:12px;
+  margin-top:15px;
+  border:1px solid var(--border);
+}
+
+/* back */
+.back{
+  display:inline-block;
+  margin-bottom:25px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+
+/* button */
+.btn{
+  display:inline-block;
+  background: linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(124,58,237,0.25);
 }
 </style>
 </head>
@@ -68,12 +139,12 @@ img {
 
 <div class="container">
 
-<a href="https://josua1983.github.io/" class="back">Back to portfolio</a>
+<a href="index.html" class="back">← Back to portfolio</a>
 
 <h1>⚙️ AI Review Intelligence System</h1>
 
 <p class="subtitle">
-End to end AI system that collects, analyzes, and transforms customer reviews into actionable business insights automatically.
+End-to-end AI system that collects, analyzes, and transforms customer reviews into actionable business insights automatically.
 </p>
 
 <div class="card">
@@ -81,11 +152,11 @@ End to end AI system that collects, analyzes, and transforms customer reviews in
 <h2>What this system does</h2>
 
 <p>
-This system collects customer reviews from external platforms and transforms raw feedback into structured business intelligence using AI.
+This system collects customer reviews and transforms raw feedback into structured business intelligence using AI.
 </p>
 
 <p>
-Instead of manually reading reviews, businesses receive clear insights about customer satisfaction, problems, and opportunities automatically.
+Instead of manually reading reviews, you instantly see what customers love, hate, and what needs improvement.
 </p>
 </div>
 
@@ -94,20 +165,20 @@ Instead of manually reading reviews, businesses receive clear insights about cus
 <h2>System architecture</h2>
 
 <p>
-The system is built from two connected layers that work together as one pipeline.
+The system runs as a two-layer pipeline: data collection and intelligence processing.
 </p>
 
 <p>
-The data collection layer gathers reviews from Google Maps using Apify and prepares them for processing.
+The first layer collects reviews from Google Maps using Apify.
 </p>
 
-<img src="AI_Review_Intelligence_Collector.png">
+<img src="AI_Review_Intelligence_Collector.png" alt="Collector">
 
 <p>
-The intelligence layer processes the data using AI to extract insights, patterns, and business recommendations.
+The second layer processes everything with AI and extracts insights, patterns, and recommendations.
 </p>
 
-<img src="AI_Review_Intelligence_Core.png">
+<img src="AI_Review_Intelligence_Core.png" alt="Core AI">
 </div>
 
 <div class="card">
@@ -115,27 +186,27 @@ The intelligence layer processes the data using AI to extract insights, patterns
 <h2>How it works</h2>
 
 <ul>
-<li>Collects customer reviews from Google Maps using Apify</li>
-<li>Aggregates and cleans raw review data</li>
-<li>Stores structured data in a database</li>
-<li>Uses AI to analyze sentiment and patterns</li>
-<li>Identifies positive feedback and complaints</li>
-<li>Generates improvement suggestions</li>
-<li>Automatically creates a business report</li>
+<li>Collects reviews via Apify</li>
+<li>Cleans and structures the data</li>
+<li>Stores everything in a database</li>
+<li>AI analyzes sentiment and patterns</li>
+<li>Detects complaints and praise</li>
+<li>Generates improvement insights</li>
+<li>Creates automated reports</li>
 </ul>
 </div>
 
 <div class="card">
 <div class="badge">OUTPUT</div>
-<h2>What the system delivers</h2>
+<h2>What you get</h2>
 
 <ul>
-<li>Top customer satisfaction drivers</li>
-<li>Most common complaints</li>
-<li>Clear improvement actions</li>
-<li>Pricing and portion insights</li>
-<li>Overall sentiment analysis</li>
-<li>Automated business reports</li>
+<li>Top positive drivers</li>
+<li>Main complaints</li>
+<li>Clear action points</li>
+<li>Pricing & portion insights</li>
+<li>Overall sentiment score</li>
+<li>Automated reports</li>
 </ul>
 </div>
 
@@ -144,24 +215,24 @@ The intelligence layer processes the data using AI to extract insights, patterns
 <h2>Why this matters</h2>
 
 <ul>
-<li>Reduces manual review analysis by up to 90 percent</li>
-<li>Provides instant insight into customer experience</li>
-<li>Helps businesses improve faster based on real data</li>
-<li>Eliminates guesswork in decision making</li>
-<li>Turns feedback into direct business actions</li>
+<li>⚡ 90% less manual work</li>
+<li>📊 Instant customer insights</li>
+<li>🚀 Faster improvements</li>
+<li>🧠 Data-driven decisions</li>
+<li>💰 Direct impact on revenue</li>
 </ul>
 </div>
 
 <div class="card">
 <div class="badge">USE CASES</div>
-<h2>Where businesses use this</h2>
+<h2>Where this is used</h2>
 
 <ul>
-<li>Restaurants and hospitality</li>
-<li>Retail and ecommerce</li>
-<li>Service based businesses</li>
-<li>Franchise performance tracking</li>
-<li>Customer experience optimization</li>
+<li>Restaurants</li>
+<li>Retail & ecommerce</li>
+<li>Service businesses</li>
+<li>Franchises</li>
+<li>Customer experience teams</li>
 </ul>
 </div>
 
@@ -170,12 +241,20 @@ The intelligence layer processes the data using AI to extract insights, patterns
 <h2>Tech stack</h2>
 
 <ul>
-<li>Make.com automation</li>
-<li>Apify scraping engine</li>
-<li>Google Gemini AI</li>
-<li>Google Sheets database</li>
-<li>Google Docs reporting</li>
+<li>Make.com</li>
+<li>Apify</li>
+<li>Gemini AI</li>
+<li>Google Sheets</li>
+<li>Google Docs</li>
 </ul>
+</div>
+
+<div class="card">
+<h2>💰 Want this for your business?</h2>
+
+<p>I build these systems custom and plug them directly into your workflow.</p>
+
+<a href="mailto:josua1983@gmail.com" class="btn">Build this for me</a>
 </div>
 
 </div>
