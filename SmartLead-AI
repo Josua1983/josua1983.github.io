@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartLead AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f4f3ff;
+  --surface: #ffffff;
+  --surface2: #f8f7ff;
+  --border: rgba(124,58,237,0.1);
+  --border-strong: rgba(124,58,237,0.22);
+  --accent: #7c3aed;
+  --accent-light: #a78bfa;
+  --accent-glow: rgba(124,58,237,0.07);
+  --text: #1e1b4b;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:50px 20px;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
+
+h1{
+  font-family:'Inter',sans-serif;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+h2{
+  font-family:'Inter',sans-serif;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
+}
+
+p, ul{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.card{
+  background:var(--surface);
+  padding:26px;
+  margin-top:20px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border:1px solid var(--border-strong);
+  box-shadow:0 10px 30px rgba(124,58,237,0.1);
+}
+
+.badge{
+  background:var(--accent-glow);
+  color:var(--accent);
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+img{
+  width:100%;
+  border-radius:12px;
+  margin-top:15px;
+  border:1px solid var(--border);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:25px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+
+.btn{
+  display:inline-block;
+  background: linear-gradient(135deg,#7c3aed,#5b21b6);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">← Back to home</a>
+
+<h1>🤖 SmartLead AI</h1>
+<p class="subtitle">
+AI-powered system that reads, classifies and responds to incoming leads automatically.
+</p>
+
+<div class="card">
+<div class="badge">OVERVIEW</div>
+<h2>🎯 What this system does</h2>
+<p>
+SmartLead AI automatically analyzes incoming emails and classifies them into HOT, WARM or SPAM.
+High-value leads trigger instant alerts and responses so you never miss revenue opportunities.
+</p>
+</div>
+
+<div class="card">
+<h2>⚙️ How it works</h2>
+<ul>
+<li>Email comes in via Gmail</li>
+<li>AI analyzes intent & urgency</li>
+<li>Lead is classified (HOT / WARM / SPAM)</li>
+<li>System triggers actions based on priority</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🔄 Make.com Scenario</h2>
+<p>
+Built fully in Make.com using Gmail, Gemini AI and Google Sheets.
+The system routes leads dynamically and automates follow-ups, alerts and storage.
+</p>
+</div>
+
+<div class="card">
+<h2>🧠 Lead Intelligence</h2>
+<p>
+Each email is enriched with AI insights:
+<ul>
+<li>Intent detection</li>
+<li>Urgency scoring</li>
+<li>Reason for classification</li>
+</ul>
+</p>
+</div>
+
+<div class="card">
+<h2>🚨 Alerts</h2>
+<p>
+HOT leads trigger instant Telegram notifications so you can act immediately.
+No more missed deals.
+</p>
+
+<img src="SmartLead AI.png" alt="SmartLead AI Workflow">
+</div>
+
+<div class="card">
+<h2>💰 Why this matters</h2>
+<p>
+Speed = money.
+This system ensures every serious lead gets immediate attention while filtering out noise.
+</p>
+</div>
+
+<div class="card">
+<h2>📈 Where businesses use this</h2>
+<p>
+Sales teams, agencies, freelancers, SaaS businesses and anyone handling inbound leads.
+</p>
+</div>
+
+<div class="card">
+<h2>🧠 Tech Stack</h2>
+<p>
+Make.com • Gmail • Google Sheets • Gemini AI • Telegram API
+</p>
+</div>
+
+<div class="card">
+<h2>Want this for your business?</h2>
+<a href="mailto:josua1983@gmail.com" class="btn">💰 Build this for me</a>
+</div>
+
+</div>
+
+</body>
+</html>
