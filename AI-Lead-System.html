@@ -1,150 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AI Lead Qualification System</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg: #f4f3ff;
-  --surface: #ffffff;
-  --surface2: #f8f7ff;
-  --border: rgba(124,58,237,0.1);
-  --border-strong: rgba(124,58,237,0.22);
-  --accent: #7c3aed;
-  --accent-light: #a78bfa;
-  --accent-glow: rgba(124,58,237,0.07);
-  --text: #1e1b4b;
-  --muted: #6b7280;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  padding:50px 20px;
-}
-
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background-image:radial-gradient(rgba(124,58,237,0.07) 1px,transparent 1px);
-  background-size:28px 28px;
-  pointer-events:none;
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-  position:relative;
-  z-index:1;
-}
-
-/* typography */
-h1{
-  font-family:'Inter',sans-serif;
-  font-size:42px;
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-h2{
-  font-family:'Inter',sans-serif;
-  font-size:18px;
-  margin-bottom:10px;
-}
-
-.subtitle{
-  color:var(--muted);
-  margin-bottom:40px;
-}
-
-p, ul{
-  color:var(--muted);
-  line-height:1.7;
-}
-
-/* cards */
-.card{
-  background:var(--surface);
-  padding:26px;
-  margin-top:20px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  border:1px solid var(--border-strong);
-  box-shadow:0 10px 30px rgba(124,58,237,0.1);
-}
-
-/* badge */
-.badge{
-  background:var(--accent-glow);
-  color:var(--accent);
-  padding:5px 10px;
-  border-radius:6px;
-  font-size:11px;
-  font-weight:700;
-  margin-bottom:10px;
-  display:inline-block;
-}
-
-/* images */
-img{
-  width:100%;
-  border-radius:12px;
-  margin-top:15px;
-  border:1px solid var(--border);
-}
-
-/* back */
-.back{
-  display:inline-block;
-  margin-bottom:25px;
-  text-decoration:none;
-  color:var(--accent);
-  font-weight:600;
-}
-
-/* button */
-.btn{
-  display:inline-block;
-  background: linear-gradient(135deg,#7c3aed,#5b21b6);
-  color:#fff;
-  padding:12px 20px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:15px;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(124,58,237,0.25);
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<a href="index.html" class="back">← Back to portfolio</a>
-
 <h1>🤖 AI Lead Qualification & Routing System</h1>
 
 <p class="subtitle">
-AI-powered system that analyzes, classifies, and routes leads in real-time — turning incoming messages into immediate business actions.
+Lightweight AI engine that analyzes and categorizes incoming leads designed as the core logic behind automated lead systems.
 </p>
 
 <div class="card">
@@ -152,12 +9,14 @@ AI-powered system that analyzes, classifies, and routes leads in real-time — t
 <h2>🎯 What this system does</h2>
 
 <p>
-This system captures incoming leads and uses AI to instantly determine their value.
-Instead of manually reading and sorting messages, businesses receive structured insights and automatic routing.
+This system acts as the decision-making layer for incoming leads.<br><br>
+
+Instead of manually reviewing messages, AI evaluates each lead and assigns a priority level based on intent and urgency.
 </p>
 
 <p>
-High-value leads are acted on immediately, while lower-value leads are organized for follow-up — fully automated.
+It doesn’t handle full automation flows, but focuses on one thing:  
+accurate, real-time lead qualification that can be plugged into any system.
 </p>
 </div>
 
@@ -166,11 +25,11 @@ High-value leads are acted on immediately, while lower-value leads are organized
 <h2>⚙️ How it works</h2>
 
 <ul>
-<li>Webhook receives lead data</li>
-<li>AI analyzes intent</li>
-<li>JSON parser structures output</li>
-<li>Router splits HOT / WARM / COLD</li>
-<li>Telegram sends alerts instantly</li>
+<li>Incoming data is received via webhook</li>
+<li>AI evaluates intent and context</li>
+<li>JSON parser structures the output</li>
+<li>Leads are categorized (HOT / WARM / COLD)</li>
+<li>Routing logic determines next step</li>
 </ul>
 </div>
 
@@ -179,7 +38,9 @@ High-value leads are acted on immediately, while lower-value leads are organized
 <h2>🔄 Make.com Scenario</h2>
 
 <p>
-Fully automated pipeline that processes leads in real-time without manual intervention.
+A modular Make.com scenario focused on classification and routing logic.<br><br>
+
+This system is typically used as a building block inside larger automation pipelines.
 </p>
 
 <img src="Integration Webhooks.png" alt="Make Scenario">
@@ -190,10 +51,10 @@ Fully automated pipeline that processes leads in real-time without manual interv
 <h2>🧠 Lead Intelligence</h2>
 
 <ul>
-<li>Type → HOT / WARM / COLD</li>
-<li>Summary → What the lead wants</li>
-<li>Urgency → How fast to act</li>
-<li>Intent → Buying vs browsing</li>
+<li>Lead type → HOT / WARM / COLD</li>
+<li>Intent → what the user is looking for</li>
+<li>Urgency → priority level</li>
+<li>Structured output → ready for automation systems</li>
 </ul>
 </div>
 
@@ -202,7 +63,9 @@ Fully automated pipeline that processes leads in real-time without manual interv
 <h2>📲 Real-Time Notifications</h2>
 
 <p>
-Leads are instantly delivered to Telegram with actionable insights.
+Can be connected to messaging platforms like Telegram to deliver classified leads instantly.<br><br>
+
+Acts as the signal layer — not the full execution system.
 </p>
 
 <img src="Telegram_AI.png" alt="Telegram Output">
@@ -213,11 +76,11 @@ Leads are instantly delivered to Telegram with actionable insights.
 <h2>💰 Why this matters</h2>
 
 <ul>
-<li>⚡ Instant response → more conversions</li>
-<li>📉 No lost leads</li>
-<li>🧠 Zero manual sorting</li>
-<li>📊 Scales infinitely</li>
-<li>💸 Direct revenue impact</li>
+<li>⚡ Faster lead understanding</li>
+<li>🧠 Consistent AI-based qualification</li>
+<li>🔌 Easy to plug into any workflow</li>
+<li>📊 Reduces manual decision-making</li>
+<li>🚀 Foundation for scalable automation</li>
 </ul>
 </div>
 
@@ -226,11 +89,11 @@ Leads are instantly delivered to Telegram with actionable insights.
 <h2>📈 Where businesses use this</h2>
 
 <ul>
-<li>Lead funnels</li>
-<li>Marketing agencies</li>
-<li>Sales teams</li>
-<li>Service businesses</li>
-<li>Startups</li>
+<li>As a core engine inside automation systems</li>
+<li>Lead scoring before CRM entry</li>
+<li>Pre-processing layer for sales pipelines</li>
+<li>Filtering inbound traffic</li>
+<li>AI-powered routing logic</li>
 </ul>
 </div>
 
@@ -243,19 +106,16 @@ Leads are instantly delivered to Telegram with actionable insights.
 <li>Webhooks</li>
 <li>Gemini AI</li>
 <li>JSON Parser</li>
-<li>Telegram API</li>
+<li>Router logic</li>
 </ul>
 </div>
 
 <div class="card">
 <h2>💰 Want this for your business?</h2>
 
-<p>I build these systems custom for clients.</p>
+<p>
+I build modular AI components like this that integrate into larger automation systems.
+</p>
 
 <a href="mailto:josua1983@gmail.com" class="btn">Build this for me</a>
 </div>
-
-</div>
-
-</body>
-</html>
